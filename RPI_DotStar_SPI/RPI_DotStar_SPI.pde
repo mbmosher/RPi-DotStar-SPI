@@ -24,7 +24,8 @@ void setup() {
 void draw() {
   // sample LED code
   for(int i = 0; i < ledCount; i++) {
-    dotstrip.setColor(i, i*20*brightness, 150*brightness, 250*brightness);
+    brightness = i / ledCount;
+    dotstrip.setColor(i, 50*brightness, 150*brightness, 250*brightness);
     dotstrip.show();
     delay(500);
   }
